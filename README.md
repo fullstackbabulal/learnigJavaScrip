@@ -1,1 +1,1 @@
-# learnigJavaScrip
+# learnigJavaScript
