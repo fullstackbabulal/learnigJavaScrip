@@ -10,35 +10,35 @@ const myHeroes = ["shaktiman", "naagraj"]
 const myArr2 = new Array(1, 2, 3, 4)
 
 // Accessing the element at index 1 of myArr
-// console.log(myArr[1]);
+ console.log(myArr[1]);
 
 // Array methods
 
 // Adding elements 6 and 7 to the end of myArr
-// myArr.push(6)
-// myArr.push(7)
+ myArr.push(6)
+ myArr.push(7)
 
 // Removing the last element from myArr
-// myArr.pop()
+ myArr.pop()
 
 // Adding element 9 to the beginning of myArr
-// myArr.unshift(9)
+ myArr.unshift(9)
 
 // Removing the first element from myArr
-// myArr.shift()
+ myArr.shift()
 
 // Checking if myArr includes the element 9
-// console.log(myArr.includes(9));
+ console.log(myArr.includes(9));
 
 // Finding the index of the element 3 in myArr
-// console.log(myArr.indexOf(3));
+ console.log(myArr.indexOf(3));
 
 // Joining all elements of myArr into a single string
-// const newArr = myArr.join()
+ const newArr = myArr.join()
 
 // Logging myArr and newArr to console
-// console.log(myArr);
-// console.log( newArr);
+ console.log(myArr);
+ console.log( newArr);
 
 // slice, splice
 
