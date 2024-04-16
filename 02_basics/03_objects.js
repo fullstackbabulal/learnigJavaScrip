@@ -4,6 +4,7 @@
 const mySym = Symbol("key1")
 
 // Object literal representing a JavaScript user
+// this is object literals
 const JsUser = {
     name: "Hitesh",
     "full name": "Hitesh Choudhary",
@@ -27,7 +28,7 @@ const JsUser = {
 JsUser.email = "hitesh@chatgpt.com"
 
 // Attempting to modify a frozen object property (commented out)
- Object.freeze(JsUser)
+ Object.freeze(JsUser)// freeze is priventing to modify object property
  JsUser.email = "hitesh@microsoft.com"
  console.log(JsUser);
 
@@ -37,7 +38,7 @@ JsUser.greeting = function(){
 }
 
 JsUser.greetingTwo = function(){
-    console.log(`Hello JS user, ${this.name}`);
+    console.log(`Hello JS user, ${this.name}`);// through "this" keyword accessing object properties
 }
 
 // Invoking the greeting methods
