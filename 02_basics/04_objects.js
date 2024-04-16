@@ -72,6 +72,8 @@ const course = {
 }
 
 // Destructuring the course object to extract the courseInstructor property
+const {courseInstructor, coursename, price} = course
+// in this line making object key to shorter like "courseIntructor => instructor"
 const {courseInstructor: instructor} = course
 
 // Logging the value of the instructor variable
