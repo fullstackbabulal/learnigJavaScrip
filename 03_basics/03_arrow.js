@@ -52,3 +52,12 @@ console.log(addTwo(3, 4)); // Outputs: { username: "hitesh" }
 // const myArray = [2, 5, 3, 7, 8]
 
 // myArray.forEach() // This line would cause an error because the forEach method expects a function argument.
+
+// Immediately Invoked Function Expressions (IIFE)
+(function chai (){
+    console.log(`DB CONNECTED`);
+})();
+
+((name)=>(
+    console.log(`DB CONNECTED TWO ${name}`)
+))('Babulal');
