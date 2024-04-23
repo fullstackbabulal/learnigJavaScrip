@@ -1,3 +1,20 @@
+// Object initialization using object literal notation
+const person = {
+    firstName: 'John',
+    lastName: 'Doe',
+    age: 30,
+    hobbies: ['reading', 'painting', 'hiking'],
+    address: {
+      street: '123 Main St',
+      city: 'Anytown',
+      country: 'USA'
+    },
+    greet: function() {
+      return `Hello, my name is ${this.firstName} ${this.lastName}.`;
+    }
+  };
+  
+
 //const tinderUser = new Object() // intialing Singleton Object
 const tinderUser = {}// intialing Literals Object
 
