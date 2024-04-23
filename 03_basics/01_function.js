@@ -1,3 +1,34 @@
+// Constructor function to create a Person object
+function Person(firstName, lastName, age) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.age = age;
+  }
+  
+  // Create a new Person object using the new keyword
+  const person1 = new Person('John', 'Doe', 30);
+  
+  // Accessing properties of the created object
+  console.log(person1.firstName); // Output: John
+  console.log(person1.lastName); // Output: Doe
+  console.log(person1.age); // Output: 30
+
+// Function declaration
+function greet(name) {
+    return `Hello, ${name}!`;
+  }
+  
+  // Function expression (anonymous function assigned to a variable)
+  const add = function(a, b) {
+    return a + b;
+  };
+  
+  // Arrow function
+  const multiply = (x, y) => {
+    return x * y;
+  };
+  
+
 function sayMyName(){
     console.log("H"); // Outputs: H
     console.log("I"); // Outputs: I
