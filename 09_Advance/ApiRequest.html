@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Api Request</title>
+</head>
+<body>
+  
+</body>
+<script>
+  const requestUrl = "https://api.github.com/users/fullstackbabulal";
+ // Define the URL of the API endpoint
+
+
+// Create a new XMLHttpRequest object
+const xhr = new XMLHttpRequest();
+
+// Open a GET request to the specified URL
+xhr.open('GET', requestUrl);
+
+// Define a callback function to handle the state change event
+xhr.onreadystatechange = function() {
+    // Log the current readyState of the XMLHttpRequest object
+    console.log(xhr.readyState);
+
+    // Check if the request is complete (readyState === 4)
+    if (xhr.readyState === 4) {
+        // Parse the response text as JSON and store it in the 'data' variable
+        const data = JSON.parse(this.responseText);
+
+        // Log the type of data received (should be 'object' after parsing)
+        console.log(typeof data);
+
+        // Log a specific property of the data (in this case, 'followers')
+        console.log(data.followers);
+    }
+};
+
+// Send the XMLHttpRequest
+xhr.send();
+
+</script>
+</html>

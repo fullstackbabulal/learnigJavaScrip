@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chai aur code | DOM</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    <ul class="language">
+        <li>Javascript</li>
+    </ul>
+</body>
+<script>
+  // Function to add a language as a list item to the '.language' list
+  function addLanguage(langName){
+      const li = document.createElement('li'); // Create a new list item element
+      li.innerHTML = `${langName}`; // Set the inner HTML of the list item to the provided language name
+      document.querySelector('.language').appendChild(li); // Append the list item to the '.language' list
+  }
+
+  // Add languages using the addLanguage function
+  addLanguage("python"); // Add Python
+  addLanguage("typescript"); // Add TypeScript
+
+  // Function to add a language as a list item to the '.language' list more optimally
+  function addOptiLanguage(langName){
+      const li = document.createElement('li'); // Create a new list item element
+      li.appendChild(document.createTextNode(langName)); // Create a text node with the language name and append it to the list item
+      document.querySelector('.language').appendChild(li); // Append the list item to the '.language' list
+  }
+
+  // Add a language using the more optimal addOptiLanguage function
+  addOptiLanguage('golang'); // Add Golang
+
+  // Edit the second language
+  const secondLang = document.querySelector("li:nth-child(2)"); // Select the second list item
+  console.log(secondLang); // Log the selected list item to the console
+  //secondLang.innerHTML = "Mojo"; // Uncomment this line to change the inner HTML directly
+  const newli = document.createElement('li'); // Create a new list item element
+  newli.textContent = "Mojo"; // Set the text content of the new list item to "Mojo"
+  secondLang.replaceWith(newli); // Replace the second list item with the new list item containing "Mojo"
+
+  // Edit the first language
+  const firstLang = document.querySelector("li:first-child"); // Select the first list item
+  firstLang.outerHTML = '<li>TypeScript</li>'; // Replace the outer HTML of the first list item with a new list item containing "TypeScript"
+
+  // Remove the last language
+  const lastLang = document.querySelector('li:last-child'); // Select the last list item
+  lastLang.remove(); // Remove the last list item
+</script>
+
+
+
+</script>
+</html>
