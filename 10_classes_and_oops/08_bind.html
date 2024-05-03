@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Metadata section -->
+    <meta charset="UTF-8"> <!-- Character encoding -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsive viewport -->
+    <title>React</title> <!-- Title of the webpage -->
+</head>
+<body>
+    <!-- Body section -->
+    <button>Button Clicked</button> <!-- Button element -->
+
+    <!-- JavaScript section -->
+    <script>
+        // Define a class named React
+        class React {
+            // Constructor function
+            constructor(){
+                // Initialize properties
+                this.library = "React"; // Name of the library
+                this.server = "https://localhost:300"; // Server URL
+
+                // Event listener for button click
+                // When the button is clicked, the handleClick method will be executed in the context of the React instance
+                document
+                    .querySelector('button') // Select the button element
+                    .addEventListener('click', this.handleClick.bind(this)); // Add event listener for click event
+            }
+
+            // Method to handle button click
+            handleClick(){
+                console.log("button clicked"); // Log message to the console
+                console.log(this.server); // Log the server URL to the console
+            }
+        }
+
+        // Create an instance of the React class
+        const app = new React();
+    </script>
+</body>
+</html>
